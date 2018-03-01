@@ -9,9 +9,9 @@ Regime > Licence Type > Licence
 
 These are:
 
-__Regime__: a high level means of grouping licences, e.g. ‘Water’ or ‘Waste’
-__Licence Type__: a means of grouping licences within a regime, e.g. ‘Water Abstraction Licence’, ‘Water Impoundment Licence’
-__Licence__: holds the licence data within a particular regime and licence type
+* __Regime__: a high level means of grouping licences, e.g. ‘Water’ or ‘Waste’
+* __Licence Type__: a means of grouping licences within a regime, e.g. ‘Water Abstraction Licence’, ‘Water Impoundment Licence’
+* __Licence__: holds the licence data within a particular regime and licence type
 
 The store is developed in HAPI/NodeJS and backed by a Postgres SQL database.  All data is transferred via a REST API with JWT authentication.
 
