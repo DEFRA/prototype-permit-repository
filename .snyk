@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.10.1
+version: v1.12.0
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   'npm:debug:20170905':
@@ -257,4 +257,10 @@ ignore:
     - yar > statehood > joi > topo > hoek:
         reason: NO update available
         expires: '2018-03-23T17:00:54.796Z'
-patch: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:hoek:20180212':
+    - notifications-node-client > jsonwebtoken > joi > hoek:
+        patched: '2018-06-18T21:48:03.495Z'
+    - notifications-node-client > jsonwebtoken > joi > topo > hoek:
+        patched: '2018-06-18T21:48:03.495Z'

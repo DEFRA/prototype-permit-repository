@@ -9,7 +9,9 @@
     "test": "./node_modules/lab/bin/lab -t 55 -m 0 --coverage-path ./src/ --ignore r -r lcov -o lcov.info -r console -o stdout",
     "test-cov-html": "lab -r html -o coverage.html",
     "migrate": "node scripts/create-schema && node node_modules/db-migrate/bin/db-migrate up --verbose",
-    "lint": "./node_modules/.bin/eslint ./src/**/*.js --fix"
+    "lint": "./node_modules/.bin/eslint ./src/**/*.js --fix",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "engines": {
     "node": ">=8.0"
@@ -33,7 +35,6 @@
     "istanbul": "^0.4.5",
     "lab": "^15.4.1",
     "run-sequence": "^2.2.1",
-    "snyk": "^1.69.7",
     "standard": "^10.0.3",
     "eslint": "^4.17.0",
     "eslint-config-standard": "^11.0.0-beta.0",
@@ -66,12 +67,14 @@
     "path": "^0.12.7",
     "pg": "^7.4.1",
     "vision": "^4.1.1",
-    "yar": "^8.1.2"
+    "yar": "^8.1.2",
+    "snyk": "^1.83.0"
   },
   "standard": {
     "ignore": [
       "node_modules/",
       "public/"
     ]
-  }
+  },
+  "snyk": true
 }
